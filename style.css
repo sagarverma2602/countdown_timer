@@ -1,0 +1,96 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.timer-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+label {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+input {
+    width: 60px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+button {
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* Smooth background color transition */
+}
+
+button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.timer-display {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    animation: fadeIn 0.5s ease-in-out; /* Fade-in animation */
+}
+
+/* Add animation for starting the timer */
+.timer-display.running {
+    animation: bounce 0.5s ease-in-out; /* Bounce animation */
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Add animation for stopping the timer */
+.timer-display.stopped {
+    animation: shake 0.5s ease-in-out; /* Shake animation */
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-5px);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(5px);
+    }
+}
+
